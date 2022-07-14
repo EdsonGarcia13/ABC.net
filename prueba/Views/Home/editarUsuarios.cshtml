@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "editarUsuarios";
+}
+
+<h2>editarUsuarios</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mx-auto" style="margin-top:8%">
+        <form class="col-sm-12 col-xs-12 col-md-12 cabez" style="">
+            <div class="col-xs-6 col-sm-6  col-md-6">
+                @*<label for="exampleFormControlSelect2">Usuarios</label>*@
+                <label>Usuarios <input type="text" id="Nombre" name="Name" /></label>
+                @*<select class="form-control" id="Nombre">*@
+                @*</select>*@
+            </div>
+
+
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <button class="btn btn-warning" id="btn-edit" type="button">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <span>EDITAR</span>
+                </button>
+            </div>
+
+
+
+        </form>
+    </div>
+    
+    <br>
+    <div class="row">
+        <div class="col-xs-12 col-md-12" id="tablaContenido" style="overflow: scroll; height: auto; width: 100%;">
+            <table class="table table-responsive table-bordered table-hover table2excel cell-border compact stripe" style="width:100%">
+                <thead>
+                    <tr class="noExl">
+                        <th scope="col"> Nombre </th>
+                        <th scope="col"> FirstName </th>
+                        <th scope="col"> LastName </th>
+                        <th scope="col"> Fecha_de_Nacimiento </th>
+                        <th scope="col"> Estado </th>
+                        <th scope="col"> Municipio </th>
+                        <th scope="col"> CP </th>
+                        <th scope="col"> Correo </th>
+                        <th scope="col"> Domicilio </th>
+                        <th scope="col"> Colonia </th>
+                        <th scope="col"> Telefono </th>
+                    </tr>
+                </thead>
+                <tbody id="datosUsurario">
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script src="~/Scripts/editarUsuarios.js"></script>
+

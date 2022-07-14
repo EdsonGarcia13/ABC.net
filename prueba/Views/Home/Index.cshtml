@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mx-auto"style="margin-top:8%">
+        <form class="col-sm-12 col-xs-12 col-md-12 cabez" id="form">
+
+            <div class="col-md-6">      
+
+                <p>Nombre: <input type="text" class="form-control" id="Nombre"></p>
+
+                <p>Primer Apellido: <input type="text" id="FirstName" class="form-control"></p>
+
+                <p>Segundo Apellido: <input type="text" id="LastName" class="form-control"></p>
+
+                <p>Fecha de Nacimiento: <input type="date" id="Fecha_de_Nacimiento" class="form-control" required></p>
+
+                <p>Estado: <input type="text" id="Estado" class="form-control"></p>
+
+                <p>Municipio: <input type="text" id="Municipio" class="form-control"></p>
+            </div>
+
+            <div class="col-md-6">
+                <p>CP: <input type="number" id="CodigoPostal" class="form-control" required></p>
+
+                <p>Correo: <input type="email" id="Correo" class="form-control" required></p>
+
+                <p>Direccion: <input type="text" id="Domicilio" class="form-control"></p>
+
+                <p>Colonia: <input type="text" id="Colonia" class="form-control"></p>
+
+                <p>Telefono: <input type="number" id="Telefono" class="form-control" required></p>
+            </div>
+                      
+             <div class="col-xs-4 col-sm-4 col-md-4">
+                <button class="btn btn-success exportToExcel" id="btn-capturar" type="button"><i class="glyphicon glyphicon glyphicon-save-file"></i><span>CAPTURAR</span> </button>
+            </div>
+
+        </form>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12" id="tablaContenido" style="overflow: scroll; height: auto; width: 100%; display: none;" >
+            <table class="table table-responsive table-bordered table-hover table2excel cell-border compact stripe" style="width:100%" >
+                <thead>
+                    <tr class="noExl">
+                        <th scope="col"> Nombre </th>
+                        <th scope="col"> FirstName </th>
+                        <th scope="col"> LastName </th>
+                        <th scope="col"> Fecha_de_Nacimiento </th>
+                        <th scope="col"> Estado </th>
+                        <th scope="col"> Municipio </th>
+                        <th scope="col"> CP </th>
+                        <th scope="col"> Correo </th>
+                        <th scope="col"> Domicilio </th>
+                        <th scope="col"> Colonia </th>
+                        <th scope="col"> Telefono </th>
+                    </tr>
+                </thead>
+                <tbody id="datosUsurario">
+                </tbody>
+            </table>
+           
+        </div>
+  
+    </div>
+
+</body>
+</html>
+<script src="~/Scripts/Usuarios.js"></script>

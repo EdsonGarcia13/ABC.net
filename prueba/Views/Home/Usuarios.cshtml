@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<h2>Usuarios</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mx-auto" style="margin-top:8%">
+        <form class="col-sm-12 col-xs-12 col-md-12 cabez" style="">
+            <div class="col-xs-6 col-sm-6  col-md-6">
+                @*<label for="exampleFormControlSelect2">Usuarios</label>*@
+                <label>Usuarios <input type="text" id="Nombre" name="Name" /></label>
+                @*<select class="form-control" id="Nombre">*@
+                @*</select>*@
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <button class="btn btn-danger" id="btn-search" type="button">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <span>BUSCAR</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <br>
+
+
+    <div class="row" style="align-items:center">
+        <div class="col-xs-12 col-md-12" id="tablaContenido" style="overflow: scroll; height: auto; width: 115%;">
+            <table class="table table-responsive table-bordered table-hover table2excel cell-border compact stripe" style="width:110%">
+                <thead>
+                    <tr class="noExl">
+                        <th scope="col"> Id </th>
+                        <th scope="col"> Nombre </th>
+                        <th scope="col"> FirstName </th>
+                        <th scope="col"> LastName </th>
+                        <th scope="col"> Fecha_de_Nacimiento </th>
+                        <th scope="col"> Estado </th>
+                        <th scope="col"> Municipio </th>
+                        <th scope="col"> CP </th>
+                        <th scope="col"> Correo </th>
+                        <th scope="col"> Domicilio </th>
+                        <th scope="col"> Colonia </th>
+                        <th scope="col"> Telefono </th>
+                        <th scope="col"> Accion </th>
+                        <th scope="col"> Accion </th>
+
+                    </tr>
+                </thead>
+                <tbody id="datosUsurario">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> EDITAR </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="col-md-6">
+                            <p><input type="hidden" class="form-control" id="identificador"></p>
+
+                            <p><input type="hidden" class="form-control" id="MPersonId"></p>
+
+                            <p>Nombre: <input type="text" class="form-control" id="MNombre"></p>
+
+                            <p>Primer Apellido: <input type="text" id="MFirstName" class="form-control"></p>
+
+                            <p>Segundo Apellido: <input type="text" id="MLastName" class="form-control"></p>
+
+                            <p>Fecha de Nacimiento: <input type="date" id="MFecha" class="form-control" required></p>
+
+                            <p>Estado: <input type="text" id="MEstado" class="form-control"></p>
+
+                            <p>Municipio: <input type="text" id="MMunicipio" class="form-control"></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>CP: <input type="number" id="MCP" class="form-control" required></p>
+
+                            <p>Correo: <input type="email" id="MCorreo" class="form-control" required></p>
+
+                            <p>Direccion: <input type="text" id="MDomicilio" class="form-control"></p>
+
+                            <p>Colonia: <input type="text" id="MColonia" class="form-control"></p>
+
+                            <p>Telefono: <input type="number" id="MTel" class="form-control" required></p>
+
+                           
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
+                    <button type="button" class="btn btn-primary" id="btn-guardar">GUARDAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
+
+<script src="~/Scripts/MostrarUsuarios.js"></script>
+
